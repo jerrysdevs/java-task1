@@ -37,19 +37,19 @@ class Contract_Employee extends Employee {
 class Employee {
 
 	public static void main(String[] args) {
-
+// Creating data using hashtable 
 		Hashtable<Integer, Employees> tab = new Hashtable<Integer, Employees>();
 		tab.put(1, new Employees(1, "arun", 50000, "contract"));
 		tab.put(2, new Employees(2, "varun", 60000, "Permanent"));
 		tab.put(3, new Employees(3, "arav", 70000, "Parttime"));
-
-//        tab.remove(3);
-
+// Removing existing data from hashtable
+		 tab.remove(3);
+// updating values in hashtable 
 		tab.put(2, new Employees(2, "Siranjeevi", 60000, "Permanent"));
 		System.out.println("Please enter the Hash id");
 
 //        System.out.println(tab.toString());
-
+// Search functionallity from hashtable via scanner and displaying the value of particular hash key
 		try (Scanner inp = new Scanner(System.in)) {
 			String str = inp.nextLine();
 			if (str == "") {
@@ -61,7 +61,6 @@ class Employee {
 				} else System.out.println(tab.get(i));
 				}
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
